@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lidu</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: #000;
+        position: relative;
+      }
+      .content {
+        position: relative;
+      }
+      .content h2 {
+        position: absolute;
+        color: #fff;
+        transform: translate(-50%, -50%);
+        font-size: 8em;
+      }
+      .content h2:nth-child(1) {
+        color: transparent;
+        -webkit-text-stroke: 2px #03a9f4;
+      }
+      .content h2:nth-child(2) {
+        color: #03a9f4;
+        animation: animate 2s ease-in-out infinite;
+      }
+      .video {
+        position: absolute;
+        top: 450px;
+        border-color: aqua;
+        border-style: solid;
+      }
+      @keyframes animate {
+        0%,
+        100% {
+          clip-path: polygon(
+            0% 48%,
+            16% 45%,
+            32% 51%,
+            47% 58%,
+            64% 59%,
+            82% 55%,
+            99% 52%,
+            99% 99%,
+            0% 98%
+          );
+        }
+        50% {
+          clip-path: polygon(
+            1% 67%,
+            17% 71%,
+            35% 70%,
+            52% 64%,
+            67% 55%,
+            80% 48%,
+            98% 48%,
+            98% 99%,
+            1% 99%
+          );
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <h2>LIDU17</h2>
+      <h2>LIDU17</h2>
+    </div>
+    <div class="video">
+      <video width="400" controls src="images/0608.mp4"></video>
+    </div>
+  </body>
+</html>
